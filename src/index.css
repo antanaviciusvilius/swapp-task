@@ -10,6 +10,24 @@ body {
 
 #root {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex: 1;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: rgb(17 24 39 / 1);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(37 99 235 / 1);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(37 99 235 / .75);
 }
