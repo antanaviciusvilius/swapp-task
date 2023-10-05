@@ -18,7 +18,7 @@ function Sidebar() {
             </span>
             <div
                 className={
-                    `relative sm:min-h-screen sm:block w-screen top-0 bottom-0 sm:left-0 p-2 sm:w-[300px] overflow-y-auto text-center bg-gray-900 
+                    `fixed sm:relative sm:min-h-screen sm:block w-screen top-0 bottom-0 sm:left-0 p-2 sm:w-[300px] overflow-y-auto text-center bg-gray-900 
                     ${sidebarOpened ? 'block' : 'hidden sm:block'}`
                 }
             >
@@ -36,7 +36,7 @@ function Sidebar() {
                     <div className="my-2 bg-gray-600 h-[1px]"></div>
                 </div>
                 {Routes.map(route =>
-                    <Link
+                    route.path && <Link
                         className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
                         to={route.path}
                     >

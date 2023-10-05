@@ -1,6 +1,6 @@
-export interface Route {
-    path: string;
-    element: JSX.Element;
-    name: string;
-    icon: string;
+import { RouteObject } from "react-router-dom";
+
+export type Route = RouteObject & {
+    name?: string;
+    icon?: string;
 }
