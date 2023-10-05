@@ -17,7 +17,9 @@ const router = createBrowserRouter([
     children: Routes,
     errorElement: <NotFoundPage />
   },
-]);
+], {
+  basename: import.meta.env.DEV ? '/' : '/swapp-task/'
+});
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
