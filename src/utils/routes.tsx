@@ -1,6 +1,6 @@
-import About from "../pages/About";
+import { Route } from "../models/Route";
 
-const Routes = [
+const Routes: Route[] = [
 ]
 
 export default Routes;

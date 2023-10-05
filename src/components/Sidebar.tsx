@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import Routes from '../utils/routes';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Routes from '../utils/routes';
 
 function Sidebar() {
     const [sidebarOpened, setSidebarOpened] = useState(false)
