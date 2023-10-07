@@ -11,25 +11,25 @@ function Sidebar() {
     return (
         <>
             <span
-                className="fixed text-white text-4xl top-5 left-4 cursor-pointer"
+                className="fixed text-white text-4xl top-5 left-5 cursor-pointer"
                 onClick={toggleSidebar}
             >
-                <i className="bi bi-filter-left px-2 bg-gray-900 rounded-md sm:hidden"></i>
+                <i className="bi bi-filter-left px-2 bg-gray-900 rounded-md md:hidden"></i>
             </span>
             <div
                 className={
-                    `fixed sm:relative sm:min-h-screen sm:block w-screen top-0 bottom-0 
-                    sm:left-0 p-2 sm:w-[200px] overflow-y-auto text-center bg-gray-900 
-                    ${sidebarOpened ? 'block' : 'hidden sm:block'}`
+                    `fixed md:relative md:min-h-screen md:block w-screen top-0 bottom-0 
+                    md:left-0 p-2 md:w-[200px] overflow-y-auto text-center bg-gray-900 
+                    ${sidebarOpened ? 'block' : 'hidden md:block'}`
                 }
             >
                 <div className="text-gray-100 text-xl">
                     <div className="p-2.5 mt-1 flex items-center">
                         <i
-                            className="bi bi-x text-3xl cursor-pointer sm:hidden"
+                            className="bi bi-x text-3xl cursor-pointer md:hidden"
                             onClick={toggleSidebar}
                         ></i>
-                        <div className='ml-auto sm:ml-0 flex items-center'>
+                        <div className='ml-auto md:ml-0 flex items-center'>
                             <i className="bi bi-app-indicator px-2 py-1 rounded-md bg-blue-600"></i>
                             <h1 className="font-bold text-gray-200 text-[15px] ml-3">Star wars</h1>
                         </div>

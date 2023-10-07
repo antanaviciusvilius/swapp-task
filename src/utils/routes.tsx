@@ -1,7 +1,15 @@
 import { redirect } from "react-router-dom";
 import { Route } from "../models/Route";
 import About from "../pages/About";
+import FilmPeople from "../pages/FilmPeople";
 import Films from "../pages/Films";
+
+const filmRoutes: Route[] = [
+    {
+        path: ":film",
+        element: <FilmPeople />
+    },
+]
 
 const Routes: Route[] = [
     {
@@ -19,6 +27,7 @@ const Routes: Route[] = [
         element: <Films />,
         name: "Films",
         icon: 'bi-film',
+        children: filmRoutes,
     },
 ]
 

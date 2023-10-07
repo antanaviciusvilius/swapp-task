@@ -11,9 +11,9 @@ function App() {
     dispatch(fetchFilm());
   })
   return (
-    <main className="flex">
+    <main className="flex flex-1">
       <Sidebar />
-      <section className="px-5 py-32 sm:p-8 flex-1 h-full overflow-auto max-w-[100vw] sm:max-w-[calc(100vw-200px)]">
+      <section className="flex flex-col px-5 pt-20 pb-12 md:p-8 flex-1 h-full overflow-auto max-w-[100vw] md:max-w-[calc(100vw-200px)]">
         <Outlet />
       </section>
     </main>
