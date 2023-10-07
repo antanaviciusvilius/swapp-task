@@ -38,7 +38,7 @@ export default FilmSlice.reducer;
 const films = (state: RootState) => state.film.films;
 
 export const filmByIdSelector = createSelector(
-    [films, (films, id?: number) => id],
+    [films, (_, id?: number) => id],
     (films, id) => {
         return films.find(film => film.episode_id === id);
     }
