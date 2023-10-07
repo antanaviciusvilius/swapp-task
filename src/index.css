@@ -5,8 +5,13 @@
 body {
     overflow: hidden;
     display: flex;
-    max-height: 100vh;
 }
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
 
 #root {
     display: flex;
