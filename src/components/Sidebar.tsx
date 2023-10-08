@@ -20,7 +20,7 @@ function Sidebar() {
             <div
                 role="navigation"
                 className={
-                    `fixed md:relative md:min-h-screen md:block w-screen top-0 bottom-0 
+                    `z-10 fixed md:relative md:min-h-screen md:block w-screen top-0 bottom-0 
                     md:left-0 p-2 md:w-[200px] overflow-y-auto text-center bg-gray-900 
                     ${sidebarOpened ? 'block' : 'hidden md:block'}`
                 }
