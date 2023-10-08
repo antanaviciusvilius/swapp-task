@@ -41,6 +41,7 @@ function Sidebar() {
                 </div>
                 {Routes.map(route =>
                     route.path && <Link
+                        onClick={toggleSidebar}
                         key={route.name}
                         className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
                         to={route.path}
