@@ -4,12 +4,14 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Films from '../pages/Films';
 import filmReducer from '../store/features/filmsSlice';
+import filterReducer from '../store/features/filterSlice';
 
 describe('Films', () => {
     test('renders Films component', () => {
         const store = configureStore({
             reducer: {
-                film: filmReducer
+                film: filmReducer,
+                filter: filterReducer
             },
             preloadedState: {
                 film: {
@@ -39,7 +41,13 @@ describe('Films', () => {
                         "created": "2014-12-10T14:23:31.880000Z",
                         "edited": "2014-12-20T19:49:45.256000Z",
                         "url": "https://swapi.dev/api/films/1/"
-                    }]
+                    }],
+                    loading: false
+                },
+                filter: {
+                    searchTerm: '',
+                    sortKey: 'episode_id',
+                    sortOrder: 'asc'
                 }
             }
         })
@@ -66,11 +74,18 @@ describe('Films', () => {
     test('renders loading state', () => {
         const store = configureStore({
             reducer: {
-                film: filmReducer
+                film: filmReducer,
+                filter: filterReducer
             },
             preloadedState: {
                 film: {
-                    films: []
+                    films: [],
+                    loading: true
+                },
+                filter: {
+                    searchTerm: '',
+                    sortKey: 'episode_id',
+                    sortOrder: 'asc'
                 }
             }
         })
