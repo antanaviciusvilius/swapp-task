@@ -11,12 +11,14 @@ function Sidebar() {
     return (
         <>
             <span
+                role="sidebar-hamburger"
                 className="fixed text-white text-4xl top-5 left-5 cursor-pointer"
                 onClick={toggleSidebar}
             >
                 <i className="bi bi-filter-left px-2 bg-gray-900 rounded-md md:hidden"></i>
             </span>
             <div
+                role="navigation"
                 className={
                     `fixed md:relative md:min-h-screen md:block w-screen top-0 bottom-0 
                     md:left-0 p-2 md:w-[200px] overflow-y-auto text-center bg-gray-900 
@@ -26,6 +28,7 @@ function Sidebar() {
                 <div className="text-gray-100 text-xl">
                     <div className="p-2.5 mt-1 flex items-center">
                         <i
+                            role="button"
                             className="bi bi-x text-3xl cursor-pointer md:hidden"
                             onClick={toggleSidebar}
                         ></i>

@@ -1,4 +1,4 @@
-import { Outlet, useMatches, useNavigate } from "react-router-dom";
+import { Outlet, useMatch, useNavigate } from "react-router-dom";
 import FilmCard from "../components/FilmCard";
 import { Film } from "../models/Film";
 import { useAppSelector } from "../store/store";
@@ -6,8 +6,8 @@ import { useAppSelector } from "../store/store";
 export default function Films() {
     const films = useAppSelector((state) => state.film.films)
     const navigate = useNavigate();
-    const matches = useMatches();
-    const selectedFilm = Number(matches.find((match) => Boolean(match.params.film))?.params?.film)
+    const matches = useMatch('films/:id');
+    const selectedFilm = Number(matches?.params?.id);
 
     const handleShowPeopleClick = (film: Film) => {
         navigate(`${film.episode_id}`);
